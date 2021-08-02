@@ -17,6 +17,7 @@ class Question(models.Model):
     # voter 추가
     voter = models.ManyToManyField(User, related_name="voter_question")
 
+
     def __str__(self):
         return self.subject
 
@@ -41,3 +42,12 @@ class Comment(models.Model):
     modify_date = models.DateTimeField(null=True, blank=True)
     question = models.ForeignKey(Question, null=True, blank=True, on_delete=models.CASCADE)
     answer = models.ForeignKey(Answer, null=True, blank=True, on_delete=models.CASCADE)
+
+
+# class Category(models.Model):
+#     name = models.CharField(max_length=20, unique=True)
+#     description = models.CharField(max_length=200, null=True, blank=True)
+#     has_answer = models.BooleanField(default=True) # 답변 가능 여부
+
+#     def __str__(self):
+#         return self.name
