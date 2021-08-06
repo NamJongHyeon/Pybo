@@ -9,7 +9,7 @@ def index(request):
     """
     pybo 목록 출력
     """
-    3/0
+    4/0
     # 입력 파라미터
     # get 방식으로 호출된 url에서 page 값을 가져옴
     # page 값이 없을 경우 default로 1이라는 값을 설정
