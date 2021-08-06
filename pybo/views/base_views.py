@@ -5,11 +5,15 @@ from ..models import Question
 
 from django.db.models import Q, Count
 
+import logging
+logger = logging.getLogger('pybo')
+
 def index(request):
     """
     pybo 목록 출력
     """
-    4/0
+    logger.info("INFO 레벨로 출력")
+    
     # 입력 파라미터
     # get 방식으로 호출된 url에서 page 값을 가져옴
     # page 값이 없을 경우 default로 1이라는 값을 설정
