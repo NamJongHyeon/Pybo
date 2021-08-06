@@ -23,8 +23,3 @@ def signup(request):
     return render(request, 'common/signup.html', {'form': form})
 
 
-def page_not_found(request, exception): #exception: 오류의 내용
-    """
-    404 Page not found
-    """
-    return render(request, 'common/404.html', {})
